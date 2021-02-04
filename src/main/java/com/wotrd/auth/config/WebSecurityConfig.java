@@ -57,11 +57,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
         http.requestMatchers()
                 .antMatchers("/login", "/login-error", "/oauth/authorize",
-                        "/oauth/token","/auth/page").and().authorizeRequests()
-                .antMatchers("/login","/auth/page").permitAll().anyRequest().authenticated();
+                        "/oauth/token").and().authorizeRequests()
+                .antMatchers("/login").permitAll().anyRequest().authenticated();
 
         // 登录页面
-        http.formLogin().loginPage("/auth/page").failureUrl("/login-error");
+        http.formLogin();//loginPage("/auth/page").failureUrl("/login-error");
         //http.formLogin();
 
         // 禁用CSRF
