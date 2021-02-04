@@ -1,3 +1,7 @@
+
+数据库脚本：src\main\resources\sql
+
+
 登录用户 admin/123456
 
 
